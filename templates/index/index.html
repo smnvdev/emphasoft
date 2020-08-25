@@ -1,0 +1,22 @@
+{% extends '_layout/index.html' %}
+
+{% block content %}
+{% include 'index/comps/header.html' %}
+<section>
+    <div class="container">
+    	<div class="row">
+            {% for friend in friends %}
+            {% with
+                background_picture='https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+                profile_picture=friend.photo_100,
+                profile_full_name='{} {}'.format(friend.first_name, friend.last_name),
+                profile_city=friend.city.title if friend.city else '',
+                profile_vk_link='https://vk.com/{}'.format(friend.domain)
+            %}
+                {% include 'index/comps/friend.card.html' %}
+            {% endwith %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

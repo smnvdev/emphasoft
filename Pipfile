@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+aiohttp-devtools = "*"
+
+[packages]
+aiohttp = "*"
+aiohttp-jinja2 = "*"
+aioredis = "*"
+pydantic = "*"
+marshmallow = "*"
+gunicorn = "*"
+
+[requires]
+python_version = "3.8"

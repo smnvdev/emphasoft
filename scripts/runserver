@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -o errexit
+set -o nounset
+
+cores=$(grep ^cpu\\scores /proc/cpuinfo | uniq |  awk '{print $4}')
+workers=$(((2 * cores) + 1))
+gunicorn server.core.app:create_application --bind 0.0.0.0:8000 --workers $workers --worker-class aiohttp.GunicornWebWorker

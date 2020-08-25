@@ -1,0 +1,20 @@
+{% extends '_layout/index.html' %}
+
+{% block js%}
+<script defer src="{{ static('js/auth.js') }}"></script>
+{% endblock %}
+
+
+{% block content %}
+<div class="container flex h-100">
+    <div class="row align-items-center h-100">
+        <div class="col text-center">
+             <button type="button" class="btn btn-primary btn-lg"
+                onclick="popupWindow('{{  123 | oauth_vk_link }}', 730, 350);return false;">
+                Войти через
+                {% include 'auth/comps/svg/vk-logo.svg' %}
+            </button>
+        </div>
+  </div>
+</div>
+{% endblock %}

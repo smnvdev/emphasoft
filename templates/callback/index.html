@@ -1,0 +1,17 @@
+{% extends '_layout/index.html' %}
+
+{% block js %}
+<script>
+    localStorage.setItem("successAuth", "yes");
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container flex h-100">
+    <div class="row align-items-center h-100">
+        <div class="col text-center">
+             <h1>Добро пожаловать!</h1>
+        </div>
+  </div>
+</div>
+{% endblock %}
