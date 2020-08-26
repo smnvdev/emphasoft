@@ -26,3 +26,4 @@
 `VK_APP_ID` - ID приложения
 `VK_APP_SECRET_KEY` - Защищенный ключ
 
+Тестовый стенд: https://semenov.fvds.ru
